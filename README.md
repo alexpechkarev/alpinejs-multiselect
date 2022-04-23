@@ -8,6 +8,9 @@ Alpine.js MultiSelect component
 - Custom template
 - No other JS dependencies
 
+## Dependency
+- [Apline.js](https://alpinejs.dev/essentials/installation)
+
 ### [Demo](https://alexpechkarev.github.io/alpinejs-multiselect/)
 
 
@@ -15,7 +18,7 @@ Alpine.js MultiSelect component
 
 ## Installation
 
-Install [Apline.js](https://alpinejs.dev/essentials/installation) from `<script>` tag or as a module.
+Install [Apline.js](https://alpinejs.dev/essentials/installation).
 
 The example uses [Alpine's Focus plugin](https://alpinejs.dev/plugins/focus), this is optional.
 
