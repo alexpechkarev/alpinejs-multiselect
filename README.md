@@ -5,18 +5,18 @@ Alpine.js MultiSelect component
 - Configurable pre-selected option
 - Fast search
 - Configurable searching values
-- Custome template
-- No other JS dependancies
+- Custom template
+- No other JS dependencies
 
 ![Alpine.js MultiSelect](alpinejs-multiselect.gif)
 
-## Instalation
+## Installation
 
 Install [Apline.js](https://alpinejs.dev/essentials/installation) from `<script>` tag or as a module.
 
 The example uses [Alpine's Focus plugin](https://alpinejs.dev/plugins/focus), this is optional.
 
-Specify your select element, `data-search` attrubute value used to match againts the search string, ignoring upper/lower case differences.
+Specify your select element, `data-search` attribute value used to match against the search string, ignoring upper/lower case differences.
 
 ```html
 <select style="display:none;" id="multSelect">
@@ -27,7 +27,7 @@ Specify your select element, `data-search` attrubute value used to match againts
 </select>
 ```
 
-Initiat the Apline.js component, pre-selected options can be deifend by initializing `selected` property witn an array of values. `elementId` references the select element `id` defined above.
+Initiate the Apline.js component, pre-selected options can be defined by initializing `selected` property with an array of values. `elementId` references the select element `id` defined above.
 
 ```html
  <div class="w-full" x-data="alpineMuliSelect({selected:['te_11', 'te_12'], elementId:'multSelect'})">
@@ -57,7 +57,7 @@ Add the Alpine component code into your application.
             return this.show === true
         },
         
-        // Initilizing component 
+        // Initializing component 
         init() {
             const options = document.getElementById(this.elementId).options;
             for (let i = 0; i < options.length; i++) {
@@ -157,8 +157,8 @@ Add the Alpine component code into your application.
 [Please open an issue on GitHub](https://github.com/alexpechkarev/alpinejs-multiselect/issues)
 
 
-## License
+## Licence
 -------
-Released under the MIT License. See the bundled
-[LICENSE](https://github.com/alexpechkarev/alpinejs-multiselect/blob/main/LICENSE)
+Released under the MIT Licence. See the bundled
+[LICENCE](https://github.com/alexpechkarev/alpinejs-multiselect/blob/main/LICENSE)
 file for details.
