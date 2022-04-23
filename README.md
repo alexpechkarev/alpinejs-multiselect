@@ -8,6 +8,9 @@ Alpine.js MultiSelect component
 - Custom template
 - No other JS dependencies
 
+### [Demo](https://alexpechkarev.github.io/alpinejs-multiselect/)
+
+
 ![Alpine.js MultiSelect](alpinejs-multiselect.gif)
 
 ## Installation
