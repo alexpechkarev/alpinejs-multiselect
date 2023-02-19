@@ -18,7 +18,7 @@ Alpine.js MultiSelect component
 
 ## Installation
 
-Install [Apline.js](https://alpinejs.dev/essentials/installation).
+Install [Alpine.js](https://alpinejs.dev/essentials/installation).
 
 The example uses [Alpine's Focus plugin](https://alpinejs.dev/plugins/focus), this is optional.
 
