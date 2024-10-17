@@ -94,16 +94,16 @@ document.addEventListener("alpine:init", () => {
         // remove from selected option
         remove(index, option) {
             this.selectedElms.splice(index, 1);
+            Object.keys(this.selected).forEach((skey) => {
+                if (this.selected[skey] == option.value) {
+                    this.selected.splice(skey, 1);
+                }
+            });
             Object.keys(this.options).forEach((key) => {
                 if (this.options[key].value == option.value) {
                     this.options[key].selected = false;
-                    Object.keys(this.selected).forEach((skey) => {
-                        if (this.selected[skey] == option.value) {
-                            this.selected.splice(skey, 1);
-                        }
-                    })
                 }
-            })
+            });
         },
         // filter out selected elements
         selectedElements() {

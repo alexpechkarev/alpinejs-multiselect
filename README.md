@@ -6,7 +6,6 @@ Alpine.js MultiSelect component
 - Fast search
 - Configurable searching values
 - Custom template
-- No other JS dependencies
 
 ## Dependency
 - [Apline.js](https://alpinejs.dev/essentials/installation)
@@ -26,8 +25,8 @@ Specify your select element, `data-search` attribute value used to match against
 
 ```html
 <select style="display:none;" id="multSelect">
-    <option value="te_1" data-search="arsenal">Arsenal</option>
-    <option value="te_3" data-search="Tottenham Hotspur Spurs">Spurs</option>
+    <option value="te_1" data-search="Arsenal">Arsenal</option>
+    <option value="te_2" data-search="Tottenham Hotspur Spurs">Spurs</option>
     <option value="te_3" data-search="Manchester City">Man City</option>
     ...
 </select>
@@ -36,7 +35,7 @@ Specify your select element, `data-search` attribute value used to match against
 Initiate the Apline.js component, pre-selected options can be defined by initializing `selected` property with an array of values. `elementId` references the select element `id` defined above.
 
 ```html
- <div class="w-full" x-data="alpineMuliSelect({selected:['te_11', 'te_12'], elementId:'multSelect'})">
+ <div class="w-full" x-data="alpineMuliSelect({selected:['te_1', 'te_2'], elementId:'multSelect'})">
  ```
 
 Add the Alpine component code into your application.
@@ -135,16 +134,16 @@ Add the Alpine component code into your application.
         // remove from selected option
         remove(index, option) {
             this.selectedElms.splice(index, 1);
+            Object.keys(this.selected).forEach((skey) => {
+                if (this.selected[skey] == option.value) {
+                    this.selected.splice(skey, 1);
+                }
+            });            
             Object.keys(this.options).forEach((key) => {
                 if (this.options[key].value == option.value) {
                     this.options[key].selected = false;
-                    Object.keys(this.selected).forEach((skey) => {
-                        if (this.selected[skey] == option.value) {
-                            this.selected.splice(skey, 1);
-                        }
-                    })
                 }
-            })
+            });
         },
         // filter out selected elements
         selectedElements() {
